@@ -23,6 +23,7 @@
   --white: hsla(0, 33%, 99%, 1);
   --primary-white: rgb(228, 224, 224);
   --secondary-white: rgb(207, 203, 203);
+  --gold: #e0af25;
 
   /* SCSS Gradient */
   --gradient-top: linear-gradient(0deg, #9128B6ff, #B5B0BEff, #232335ff, #302159ff, #FEFDFDff, #681892ff);
@@ -104,6 +105,13 @@ body {
 
 .sectionTitle {
   @apply text-4xl font-semibold mb-2 mt-6 uppercase px-4 lg:px-0;
+}
+
+.sectionTitleWhite {
+  color: var(--gold) !important;
+  text-align: center !important;
+  font-size: 3.5rem;
+  @apply col-span-full;
 }
 
 .sectionTitleSecondary {
@@ -214,11 +222,29 @@ body {
 /* HONOURS Section */
 
 .honours {
-  @apply py-8 mb-4 bg-no-repeat bg-cover bg-center relative;
-  background: linear-gradient(45deg, red, blue);
+  @apply pb-10 mb-4 bg-no-repeat bg-cover bg-center relative overflow-hidden lg:rounded-xl grid md:grid-cols-3 gap-4 gap-y-12;
+  background: linear-gradient(45deg, rgb(255, 0, 0), rgb(27, 27, 244));
 }
 
-.honours::before {
-  @apply absolute top-0 w-full h-full z-20;
-  background-image: url('../assets/images/svg1.svg');
+.honours .svg {
+  @apply absolute bg-cover bg-no-repeat bg-center top-0 left-0 w-full h-full bg-opacity-10;
+  background-image: url('../assets/images/svg4.svg');
+}
+
+.trophyDiv {
+  @apply flex flex-col items-center justify-center text-center gap-4;
+}
+
+.trophySvg {
+  @apply h-28 w-28 stroke-[#e0af25];
+}
+
+.trophyTotal {
+  @apply text-6xl;
+  color: var(--primary-white);
+}
+
+.trophyCompetition {
+  @apply text-4xl font-semibold;
+  color: var(--primary-white);
 }

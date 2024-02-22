@@ -45,7 +45,7 @@ export const news = [
         category: 'Championnat'
     },
     {
-        title: 'Les plus grandes légendes du club',
+        title: 'Top 10 de plus grandes légendes du club',
         image: img5,
         createdAt: new Date(2024, 7, 10),
         author: 'Henoc Musau',
@@ -66,7 +66,7 @@ export const news = [
         category: 'Championnat'
     },
     {
-        title: 'Tout le monde se lève pour applaudir le soldat Chichi auteur d\'une magnifique saison',
+        title: 'Tout le monde se lève pour applaudir le soldat Chichi',
         image: img8,
         createdAt: new Date(2024, 7, 10),
         author: 'Henoc Musau',

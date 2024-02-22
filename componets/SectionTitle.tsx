@@ -1,31 +1,17 @@
+import { antonio } from '@/lib/fonts/googleFonts'
 import React from 'react'
-import { Alumni_Sans, Squada_One, Teko, Anton } from 'next/font/google'
 
-const teko = Teko({
-    weight: ['500'],
-    fallback: ['Arial', 'sans-serif'],
-    subsets: ["latin"]
-})
-
-const antonio = Squada_One({
-    weight: ['400'],
-    fallback: ['Arial', 'sans-serif'],
-    subsets: ["latin"]
-})
-
-const alumni = Anton({
-    weight: ['400'],
-    fallback: ['Arial', 'sans-serif'],
-    subsets: ["latin"]
-})
 
 interface Props {
     text: string
     isSecondary?: boolean
+    white?: boolean
 }
 
-export default function SectionTitle({ text, isSecondary }: Props) {
+export default function SectionTitle({ text, isSecondary, white }: Props) {
     const style = isSecondary ? ' sectionTitleSecondary ' : ' sectionTitle'
+
+    if (white) return <h2 className={antonio.className + ' sectionTitle sectionTitleWhite'}>{text}</h2>
     return (
         <h2 className={antonio.className + style}>{text}</h2>
     )

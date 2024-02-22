@@ -2,21 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Teko, Squada_One } from 'next/font/google'
-
-const teko = Teko({
-    weight: ['500'],
-    fallback: ['AgencyFB', 'Arial', 'sans-serif'],
-    subsets: ["latin"]
-})
-
-const antonio = Squada_One({
-    weight: ['400'],
-    fallback: ['Arial', 'sans-serif'],
-    subsets: ["latin"]
-})
-
 import { news } from '@/constants/news'
+import { antonio } from '@/lib/fonts/googleFonts'
 const heroNews = news[0]
 
 export default function Hero() {
