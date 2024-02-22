@@ -4,10 +4,13 @@ import { Navbar } from '..'
 export default function Header() {
     return (
         <header className='header'>
-            <strong className='brand'>
-                HELKATP
-            </strong>
-            <Navbar />
+            <div className='container'>
+                <strong className='brand'>
+                    HELKATP
+                </strong>
+
+                <Navbar />
+            </div>
         </header>
     )
 }
