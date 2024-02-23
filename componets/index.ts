@@ -7,6 +7,8 @@ import PostPreview from "./Post/postPreview";
 import SectionTitle from "./SectionTitle";
 import LastsPosts from "./LastsPosts";
 import Hounours from "./Hounours";
+import PlayerPreview from "./Player/PlayerPreview";
+import PlayersPreview from "./Player/PlayersPreview";
 
 
 export {
@@ -18,5 +20,7 @@ export {
     PostPreview,
     LastsPosts,
     LastsVideos,
-    Hounours
+    Hounours,
+    PlayerPreview,
+    PlayersPreview
 }
