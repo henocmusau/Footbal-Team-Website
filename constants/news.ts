@@ -7,8 +7,9 @@ import img5 from '@/assets/images/img5.jpg'
 import img6 from '@/assets/images/img6.jpg'
 import img7 from '@/assets/images/img7.jpg'
 import img8 from '@/assets/images/img8.jpg'
+import { Post } from "@/types/news";
 
-export const news = [
+export const news: Post[] = [
     {
         title: 'Helka écrase son adversaire et remporte le titre !',
         image: heroImg,
@@ -59,7 +60,7 @@ export const news = [
         category: 'Championnat'
     },
     {
-        title: 'L\'incroyable montée en puissance de Jonathan Masika',
+        title: 'L\'incroyable montée en puissance de Jonathan Masika après une première partie de la saison ratée',
         image: img7,
         createdAt: new Date(2024, 6, 24),
         author: 'Henoc Musau',

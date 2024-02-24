@@ -9,6 +9,9 @@ import LastsPosts from "./LastsPosts";
 import Hounours from "./Hounours";
 import PlayerPreview from "./Player/PlayerPreview";
 import PlayersPreview from "./Player/PlayersPreview";
+import CallToAction from "./CallToAction/CallToAction";
+import Breves from "./Breves/Breves";
+import BrevePreview from "./Breves/BrevePreview";
 
 
 export {
@@ -22,5 +25,8 @@ export {
     LastsVideos,
     Hounours,
     PlayerPreview,
-    PlayersPreview
+    PlayersPreview,
+    CallToAction,
+    Breves,
+    BrevePreview
 }

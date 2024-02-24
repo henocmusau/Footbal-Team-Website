@@ -10,9 +10,9 @@ import PlayButton from './PlayButton'
 
 export default function LastsVideos() {
     return (
-        <section className='videoSection'>
+        <section className='breves__videos'>
             <header className='videoSection__header'>
-                <SectionTitle text="Découvrez les récentes vidéos de l'Equipe" />
+                <SectionTitle isSecondary text="Découvrez les récentes vidéos de l'Equipe" />
             </header>
 
             {/* <div className='imgContainer'> */}
@@ -23,10 +23,12 @@ export default function LastsVideos() {
                         <Image
                             alt='Helka Videos'
                             src={img}
-                            className='videoElement'
+                            className='image'
                         />
                         {/* <PlayCircle className='playSvg' /> */}
                         <PlayButton />
+                        <SectionTitle isSecondary={true} text={'Titre de la vidéo '} />
+
                     </button>
                 ))
             }

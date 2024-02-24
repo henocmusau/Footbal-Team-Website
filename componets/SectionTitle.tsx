@@ -1,4 +1,3 @@
-import { antonio } from '@/lib/fonts/googleFonts'
 import React from 'react'
 
 
@@ -11,8 +10,8 @@ interface Props {
 export default function SectionTitle({ text, isSecondary, white }: Props) {
     const style = isSecondary ? ' sectionTitleSecondary ' : ' sectionTitle'
 
-    if (white) return <h2 className={antonio.className + ' sectionTitle sectionTitleWhite'}>{text}</h2>
+    if (white) return <h2 className={' sectionTitle sectionTitleWhite'}>{text}</h2>
     return (
-        <h2 className={antonio.className + style}>{text}</h2>
+        <h2 className={style}>{text}</h2>
     )
 }

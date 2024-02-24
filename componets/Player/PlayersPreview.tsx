@@ -5,12 +5,12 @@ import { PlayerPreview } from '..'
 
 export default function PlayersPreview() {
     return (
-        <section className='playersPreview'>
+        <ul className='playersPreview'>
             {
                 players.map((player, i) => (
                     <PlayerPreview key={i} player={player} />
                 ))
             }
-        </section>
+        </ul>
     )
 }

@@ -1,16 +1,12 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { SectionTitle } from '..'
 
+import { Post } from '@/types/news';
+
 interface Props {
-    post: {
-        title: string
-        author?: string
-        category?: string
-        createdAt?: Date
-        image: StaticImageData
-    }
+    post: Post
 }
 
 export default function PostPreview({ post }: Props) {

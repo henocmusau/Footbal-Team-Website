@@ -1,17 +1,11 @@
-// import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Roboto } from 'next/font/google'
 import './globals.css'
 
 // import ogImage from '@/assets/images/og.webp'
 import { defaultMetadata } from '@/lib/metadata/default'
 import { Footer, Header } from '@/componets'
+import { antonio } from '@/lib/fonts/googleFonts'
+import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto({
-  weight: '500',
-  subsets: ['latin']
-})
 
 export const metadata = defaultMetadata
 
@@ -22,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={antonio.className}>
         <Header />
 
         <main className='mainLayout'>
@@ -31,6 +25,7 @@ export default function RootLayout({
 
         <Footer />
       </body>
+      <Script src='script.js' />
     </html>
   )
 }
