@@ -38,11 +38,11 @@
   --gradient-radial: radial-gradient(#9128B6ff, #B5B0BEff, #232335ff, #302159ff, #FEFDFDff, #681892ff);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
-    /*    color-scheme: dark;*/
+       color-scheme: dark;
   }
-}
+} */
 
 
 body,
@@ -73,7 +73,7 @@ body {
 .footer {
   background: var(--gradient-top2);
   /* background: linear-gradient(to right top, var(--raisin-black), var(--russian-violet)); */
-  @apply min-h-4 py-3 z-10 font-sans;
+  @apply min-h-4 py-3 z-[100] font-sans;
   color: var(--white);
 }
 
@@ -87,15 +87,23 @@ body {
 }
 
 .hamburger {
-  @apply block lg:hidden;
+  @apply block md:hidden;
 }
 
 .navbar {
-  @apply hidden lg:flex items-center justify-center text-center gap-2 relative;
+  @apply -translate-x-[60rem] transition-transform ease-in-out duration-300 z-[60] py-6 px-4 md:px-0 md:py-0 bg-[#302159ff]/70 backdrop-blur w-screen md:w-auto h-screen md:h-auto md:bg-transparent md:backdrop-blur-none left-0 top-0 absolute md:relative md:translate-x-0 md:flex items-center justify-center text-center gap-2;
+}
+
+.closeBtn {
+  @apply md:hidden absolute top-2 right-2 z-[70];
+}
+
+.navbarActive {
+  @apply translate-x-0;
 }
 
 .navlink {
-  @apply capitalize relative overflow-hidden flex items-center justify-center text-center text-lg cursor-pointer duration-200 py-2 px-4 rounded-lg;
+  @apply uppercase relative overflow-hidden flex items-center justify-center text-center cursor-pointer duration-200 py-2 px-4 md:px-2 rounded-lg;
 }
 
 .navlink::after {
@@ -104,7 +112,7 @@ body {
 }
 
 .navlink:hover::after {
-  @apply lg:w-full
+  @apply lg:w-full;
 }
 
 .activeLink {
