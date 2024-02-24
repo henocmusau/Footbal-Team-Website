@@ -12,6 +12,8 @@ import PlayersPreview from "./Player/PlayersPreview";
 import CallToAction from "./CallToAction/CallToAction";
 import Breves from "./Breves/Breves";
 import BrevePreview from "./Breves/BrevePreview";
+import Navlink from "./Navlink";
+
 
 
 export {
@@ -28,5 +30,6 @@ export {
     PlayersPreview,
     CallToAction,
     Breves,
-    BrevePreview
+    BrevePreview,
+    Navlink,
 }

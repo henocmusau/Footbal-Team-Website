@@ -3,6 +3,8 @@ import Image, { StaticImageData } from 'next/image';
 import { UserRound } from 'lucide-react'
 import Link from 'next/link';
 
+import logo from '@/assets/logos/logoWhiteSolo.svg'
+
 interface Props {
     player: {
         firstName: string;

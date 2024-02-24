@@ -73,7 +73,7 @@ body {
 .footer {
   background: var(--gradient-top2);
   /* background: linear-gradient(to right top, var(--raisin-black), var(--russian-violet)); */
-  @apply min-h-6 py-3 z-10 font-sans;
+  @apply min-h-4 py-3 z-10 font-sans;
   color: var(--white);
 }
 
@@ -81,16 +81,50 @@ body {
   @apply flex justify-between items-center;
 }
 
+.header__container {
+  @apply px-4;
+  color: var(--primary-white);
+}
+
+.hamburger {
+  @apply block lg:hidden;
+}
+
+.navbar {
+  @apply hidden lg:flex items-center justify-center text-center gap-2 relative;
+}
+
+.navlink {
+  @apply capitalize relative overflow-hidden flex items-center justify-center text-center text-lg cursor-pointer duration-200 py-2 px-4 rounded-lg;
+}
+
+.navlink::after {
+  content: '';
+  @apply absolute w-0 h-[2px] bg-slate-200 top-0 left-0 transition-[width] duration-500 ease-in-out;
+}
+
+.navlink:hover::after {
+  @apply lg:w-full
+}
+
+.activeLink {
+  @apply bg-slate-400/30 duration-200;
+}
+
 .brand {
   /* color: var(--white); */
   @apply text-3xl font-semibold;
+}
+
+.brand__image {
+  @apply h-8 w-full;
 }
 
 
 /* TITLES */
 .bigtitle {
   color: var(--raisin-black);
-  @apply text-3xl font-semibold;
+  @apply text-3xl;
 }
 
 .title {
@@ -140,7 +174,7 @@ body {
 }
 
 .hero .title__container {
-  @apply absolute bottom-6 w-full animate-fadeIn delay-300 z-40 px-4 md:px-8 lg:px-16 flex flex-col items-center;
+  @apply absolute bottom-6 w-full animate-fadeIn delay-700 z-40 px-4 md:px-8 lg:px-16 flex flex-col items-center;
   color: var(--french-gray);
 }
 
@@ -253,7 +287,7 @@ body {
 }
 
 .playerItem .fullname .lastName {
-  @apply font-bold text-5xl;
+  @apply font-bold text-4xl;
   /* font-size: 2.5rem; */
 }
 
@@ -264,7 +298,7 @@ body {
 }
 
 .playerItem .number {
-  @apply absolute top-4 right-4 text-8xl font-extrabold text-white/20;
+  @apply absolute top-2 right-4 text-8xl font-extrabold text-white/20;
 }
 
 .playerItem__aside {
@@ -279,8 +313,6 @@ body {
 .aside__svg {
   @apply absolute inset-y-auto left-4 w-5 h-5;
 }
-
-
 
 /* BREVES */
 
