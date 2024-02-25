@@ -13,7 +13,7 @@ import CallToAction from "./CallToAction/CallToAction";
 import Breves from "./Breves/Breves";
 import BrevePreview from "./Breves/BrevePreview";
 import Navlink from "./Navlink";
-
+import SocialMedia from "./Header/SocialMedia";
 
 
 export {
@@ -32,4 +32,5 @@ export {
     Breves,
     BrevePreview,
     Navlink,
+    SocialMedia
 }
