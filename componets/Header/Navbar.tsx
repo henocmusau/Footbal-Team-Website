@@ -18,7 +18,7 @@ export default function Navbar({ isOpen, closeNav }: Props) {
     return (
         <>
             <nav className={isOpen ? 'navbar navbarActive' : 'navbar'}>
-                <Link href={'/'} className='navbar__brand navPadding'>
+                <Link onClick={closeNav} href={'/'} className='navbar__brand navPadding'>
                     <Image className='navbar__brand__image' src={logo} alt='Helka TP logo' />
                 </Link>
                 {
@@ -32,6 +32,7 @@ export default function Navbar({ isOpen, closeNav }: Props) {
                 }
 
                 <ul className='mobilesocialMedias'>
+                    <h2 className='title fullBasis'>Suivez-nous sur</h2>
                     {
                         socialMedias.map((sm) => (
                             <SocialMedia key={sm.name} {...sm} />

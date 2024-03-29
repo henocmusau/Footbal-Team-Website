@@ -3,6 +3,7 @@ import React from 'react'
 import { Post } from "@/types/news";
 import Image from 'next/image';
 import Link from 'next/link';
+import { Clock3 } from 'lucide-react';
 
 interface Props {
     post: Post
@@ -17,7 +18,10 @@ export default function BrevePreview({ post }: Props) {
                 <h2 className='breve__title'>{post.title}</h2>
                 <aside className='breve__aside'>
                     <p className='category'>{post.category}</p>
-                    <time className='date'>{post.createdAt?.toLocaleDateString()}</time>
+                    <time className='date'>
+                        <Clock3 className='svgDate' />
+                        {post.createdAt?.toLocaleDateString()}
+                    </time>
                 </aside>
             </div>
         </Link>
